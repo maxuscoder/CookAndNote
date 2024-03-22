@@ -1,0 +1,258 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #efeade;
+}
+
+.app {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* takes the full viewport height */
+}
+
+button {
+  font-family: "Quicksand", sans-serif;
+}
+
+.header {
+  text-transform: uppercase;
+  background-color: rgb(108, 60, 39);
+  margin: 0;
+  padding: 2.5%;
+  text-align: center;
+  color: white;
+  font-family: "Bree Serif", serif;
+  letter-spacing: 3px;
+  font-size: 3rem;
+}
+.footer {
+  background-color: #b57308;
+  color: white;
+  text-align: center;
+  padding: 1.6%;
+}
+
+.panel {
+  flex: 1; /* This makes the panel take up the remaining space */
+  display: flex; /* Flexbox for inner layout */
+}
+
+.left {
+  padding-left: 100px;
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Sacramento", cursive;
+  font-size: 25px;
+}
+
+.mid {
+  flex: 1;
+  text-align: center;
+}
+.right {
+  padding-right: 100px;
+  flex: 1;
+  height: 484px;
+  /* text-align: left; */
+  border: 12px double rgb(77, 42, 12);
+  padding: 10px 30px;
+  margin: 50px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.right h2 {
+  border-bottom: 2px solid black;
+  padding-bottom: 5px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-add-recipe {
+  background-color: #b57308;
+  color: #ffffff;
+  padding: 12px 18px;
+  border-radius: 50%;
+  border: 2px solid rgb(155, 106, 51);
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.btn-add-recipe:hover {
+  transform: rotate(90deg);
+  background-color: #9f6507;
+}
+
+.recipe {
+  display: flex;
+  align-items: center;
+  /* justify-content: flex-start; */
+  margin: 2%;
+  gap: 50px;
+  border: 1px solid rgb(166, 166, 166);
+  padding: 0 5%;
+}
+
+.recipe h3 {
+  font-size: 14px;
+}
+
+.recipe img {
+  width: 70px;
+  height: 70px;
+}
+
+.attr {
+  font-size: 13px;
+}
+
+.edit-form {
+  flex: 1;
+  border-left: 2px solid rgb(120, 72, 28, 0.2);
+  border-right: 2px solid rgb(120, 72, 28, 0.2);
+  margin: 2.5% 0;
+  text-align: center;
+}
+
+.edit-form form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 6%;
+  padding-left: 11%;
+}
+
+.edit-form label {
+  text-align: left;
+}
+
+.formInputs {
+  padding: 5px;
+  margin-top: 5px;
+  background-color: rgb(242, 226, 197);
+  border-radius: 6px;
+  font-size: 17px;
+}
+
+.formInputs:hover {
+  background-color: rgb(241, 217, 172);
+}
+
+.btn-close-form {
+  background-color: red;
+  color: white;
+  border: 1px solid rgb(101, 59, 27);
+}
+
+.btn-close-form:hover {
+  background-color: rgb(214, 0, 0);
+}
+
+.mid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-btns {
+  display: flex;
+  gap: 7px;
+}
+
+.submitRecipeForm {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #b57308;
+  border: 2px solid rgb(155, 106, 51);
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 17px;
+  transition: all;
+  transition-duration: 0.2s;
+}
+
+.submitRecipeForm:hover {
+  cursor: pointer;
+  background-color: #945e08;
+}
+
+@media screen and (max-width: 1000px) {
+  .panel {
+    flex-direction: column;
+    width: 70%;
+    margin: auto;
+  }
+
+  .left,
+  .right {
+    padding: 0;
+    margin: 0;
+  }
+
+  .left {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .right {
+    padding: 20px;
+    height: auto;
+    margin: 20px;
+  }
+
+  .recipe {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    padding: 10px;
+  }
+
+  .recipe img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .attr {
+    font-size: 13px;
+  }
+
+  .btn-add-recipe {
+    padding: 10px 14px;
+    font-size: 16px;
+  }
+  .edit-form {
+    border-left: 0;
+    border-right: 0;
+    border-top: 2px solid rgb(120, 72, 28, 0.2);
+    border-bottom: 2px solid rgb(120, 72, 28, 0.2);
+    margin: 2.5% 0;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .edit-form form {
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .panel {
+    width: 90%;
+  }
+}
