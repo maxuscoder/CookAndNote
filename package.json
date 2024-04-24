@@ -2,6 +2,7 @@
   "name": "cook-n-note",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://maxuscoder.github.io/CookAndNote/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
