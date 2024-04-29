@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import Pasta from "./images/pasta.jpg";
+import Burger from "./images/burger.jpg";
+import PotatoHam from "./images/potato-ham.jpg";
 
 const initialRecipes = [
   {
@@ -7,7 +10,7 @@ const initialRecipes = [
     ingredients: ["pasta", "beef", "cheddar", "parmesan", "cream"],
     difficulty: 2,
     duration: 35,
-    imgsrc: "pasta.jpg",
+    imgsrc: Pasta,
   },
   {
     id: 2,
@@ -15,7 +18,7 @@ const initialRecipes = [
     ingredients: ["bun", "chicken", "salad", "cheese", "tomato", "sauce"],
     difficulty: 1,
     duration: 20,
-    imgsrc: "burger.jpg",
+    imgsrc: Burger,
   },
   {
     id: 3,
@@ -23,7 +26,7 @@ const initialRecipes = [
     ingredients: ["potato", "ham", "mozzarela", "onion"],
     difficulty: 3,
     duration: 60,
-    imgsrc: "potato-ham.jpg",
+    imgsrc: PotatoHam,
   },
 ];
 
