@@ -10,7 +10,8 @@ const initialRecipes = [
     ingredients: ["pasta", "beef", "cheddar", "parmesan", "cream"],
     difficulty: 2,
     duration: 35,
-    imgsrc: Pasta,
+    imgsrc:
+      "https://images.immediate.co.uk/production/volatile/sites/30/2021/03/Cacio-e-Pepe-e44b9f8.jpg?quality=90&resize=556,505",
   },
   {
     id: 2,
@@ -18,7 +19,8 @@ const initialRecipes = [
     ingredients: ["bun", "chicken", "salad", "cheese", "tomato", "sauce"],
     difficulty: 1,
     duration: 20,
-    imgsrc: Burger,
+    imgsrc:
+      "https://assets.epicurious.com/photos/5c745a108918ee7ab68daf79/1:1/w_2560%2Cc_limit/Smashburger-recipe-120219.jpg",
   },
   {
     id: 3,
@@ -26,7 +28,8 @@ const initialRecipes = [
     ingredients: ["potato", "ham", "mozzarela", "onion"],
     difficulty: 3,
     duration: 60,
-    imgsrc: PotatoHam,
+    imgsrc:
+      "https://spicedblog.com/wp-content/uploads/2023/10/Cheesy-Ham-and-Potato-Casserole1-500x500.jpg",
   },
 ];
 
