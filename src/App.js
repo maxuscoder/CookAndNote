@@ -316,12 +316,21 @@ function AddForm({ onAddNewRecipe, isAdding, setIsAdding }) {
           />
         </label>
         <input type="file" accept="image/*" onChange={handleImageChange} />{" "}
-        {image && (
-          <img src={image} alt="Uploaded" style={{ maxWidth: "100px" }} />
-        )}{" "}
-        <button type="submit" className="submitRecipeForm">
-          Add Recipe
-        </button>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "20px",
+          }}
+        >
+          <button type="submit" className="submitRecipeForm">
+            Add Recipe
+          </button>
+          {image && (
+            <img src={image} alt="Uploaded" style={{ maxWidth: "100px" }} />
+          )}{" "}
+        </div>
       </form>
     </div>
   );
