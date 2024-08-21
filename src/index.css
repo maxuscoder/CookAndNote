@@ -9,7 +9,7 @@ body {
   font-weight: 500;
   display: flex;
   flex-direction: column;
-  height: 100vh; /* takes the full viewport height */
+  height: 100vh;
 }
 
 button {
@@ -59,7 +59,6 @@ button {
   padding-right: 100px;
   flex: 1;
   height: 484px;
-  /* text-align: left; */
   border: 12px double rgb(77, 42, 12);
   padding: 10px 30px;
   margin: 50px;
@@ -94,12 +93,12 @@ button {
 
 .recipe {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  /* justify-content: flex-start; */
   margin: 2%;
-  gap: 50px;
   border: 1px solid rgb(166, 166, 166);
-  padding: 0 5%;
+  border-radius: 5px;
+  padding: 5%;
 }
 
 .recipe h3 {
@@ -142,6 +141,7 @@ button {
   padding: 5px;
   margin-top: 5px;
   background-color: rgb(242, 226, 197);
+  border: 1px solid rgb(49, 36, 13);
   border-radius: 6px;
   font-size: 17px;
 }
@@ -154,6 +154,7 @@ button {
   background-color: red;
   color: white;
   border: 1px solid rgb(101, 59, 27);
+  border-radius: 5px;
 }
 
 .btn-close-form:hover {
@@ -168,7 +169,14 @@ button {
 
 .edit-btns {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 7px;
+}
+
+.edit-btns img {
+  width: 50%;
+  height: 50%;
 }
 
 .submitRecipeForm {
@@ -189,6 +197,10 @@ button {
   background-color: #945e08;
 }
 
+.mid-img {
+  border-radius: 10px;
+}
+
 @media screen and (max-width: 1000px) {
   .panel {
     flex-direction: column;
@@ -203,27 +215,24 @@ button {
   }
 
   .left {
-    padding: 20px;
     text-align: center;
+    flex: 0;
+    padding-bottom: 25px;
+  }
+
+  .mid {
+    flex: 0;
+    margin-top: 35px;
+  }
+
+  .header {
+    font-size: 2rem;
   }
 
   .right {
     padding: 20px;
     height: auto;
     margin: 20px;
-  }
-
-  .recipe {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0;
-    padding: 10px;
-  }
-
-  .recipe img {
-    width: 120px;
-    height: 120px;
   }
 
   .attr {
@@ -241,7 +250,6 @@ button {
     border-bottom: 2px solid rgb(120, 72, 28, 0.2);
     margin: 2.5% 0;
     text-align: center;
-    padding-top: 50px;
     padding-bottom: 50px;
   }
   .edit-form form {

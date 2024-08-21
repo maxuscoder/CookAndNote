@@ -57,8 +57,6 @@ export default function App() {
   }
 
   function handleAddNewRecipe(newRecipe) {
-    //here
-    console.log(newRecipe);
     setRecipes((recipes) => [
       ...recipes,
       { ...newRecipe, id: Math.max(...recipes.map((recipe) => recipe.id)) + 1 },
@@ -155,6 +153,7 @@ function Mid() {
         alt="cooking_img"
         width="300px"
         height="400px"
+        className="mid-img"
       ></img>
     </div>
   );
@@ -180,7 +179,6 @@ function Right({ recipes, onDeleteRecipe, onEditRecipe }) {
 function Recipe({ recipe, onDeleteRecipe, onEditRecipe }) {
   return (
     <div className="recipe">
-      <img src={recipe.imgsrc} alt={recipe.title}></img>
       <div className="recipe-details">
         <h3>🍽️ {recipe.title}</h3>
         <p className="attr">🧾 {recipe.ingredients?.join(", ")}</p>
@@ -188,20 +186,23 @@ function Recipe({ recipe, onDeleteRecipe, onEditRecipe }) {
         <p className="attr">Duration: {recipe.duration} min. ⏳</p>
       </div>
       <div className="edit-btns">
-        <button
-          onClick={() => {
-            onDeleteRecipe(recipe.id);
-          }}
-        >
-          ❌
-        </button>
-        <button
-          onClick={() => {
-            onEditRecipe(recipe.id);
-          }}
-        >
-          ✏️
-        </button>
+        <img src={recipe.imgsrc} alt={recipe.title}></img>
+        <div style={{ display: "flex", gap: "5px" }}>
+          <button
+            onClick={() => {
+              onDeleteRecipe(recipe.id);
+            }}
+          >
+            ❌
+          </button>
+          <button
+            onClick={() => {
+              onEditRecipe(recipe.id);
+            }}
+          >
+            ✏️
+          </button>
+        </div>
       </div>
     </div>
   );
@@ -259,9 +260,9 @@ function AddForm({ onAddNewRecipe, isAdding, setIsAdding }) {
       ingredients: [],
       duration: "",
       difficulty: "",
-      imgsrc: "", // Reset imgsrc to an empty string after submitting
+      imgsrc: "",
     });
-    setImage(null); // Reset the image state
+    setImage(null);
   }
 
   return (
@@ -315,11 +316,9 @@ function AddForm({ onAddNewRecipe, isAdding, setIsAdding }) {
           />
         </label>
         <input type="file" accept="image/*" onChange={handleImageChange} />{" "}
-        {/* Add input for image upload */}
         {image && (
           <img src={image} alt="Uploaded" style={{ maxWidth: "100px" }} />
         )}{" "}
-        {/* Display the uploaded image */}
         <button type="submit" className="submitRecipeForm">
           Add Recipe
         </button>
@@ -340,7 +339,7 @@ function EditForm({ recipe, onUpdateRecipe, isEditing, setIsEditing }) {
         setImage(reader.result);
         setUpdatedRecipe((prevRecipe) => ({
           ...prevRecipe,
-          imgsrc: reader.result, // Update imgsrc property with the image data
+          imgsrc: reader.result,
         }));
       };
       reader.readAsDataURL(file);
