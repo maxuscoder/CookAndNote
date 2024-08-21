@@ -91,6 +91,11 @@ button {
   background-color: #9f6507;
 }
 
+.recipes-list {
+  display: flex;
+  flex-direction: column;
+}
+
 .recipe {
   display: flex;
   flex-direction: column;
@@ -108,6 +113,10 @@ button {
 .recipe img {
   width: 70px;
   height: 70px;
+}
+
+.recipe-details {
+  width: 100%;
 }
 
 .attr {
@@ -203,12 +212,16 @@ button {
 
 @media screen and (max-width: 1000px) {
   .edit-form form {
-    margin-bottom: 200px;
+    margin-bottom: 100px;
   }
   .panel {
     flex-direction: column;
     width: 70%;
     margin: auto;
+  }
+
+  .recipes-list {
+    gap: 10px;
   }
 
   .left,
@@ -236,6 +249,9 @@ button {
     padding: 20px;
     height: auto;
     margin: 20px;
+    height: 484px;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 
   .attr {
