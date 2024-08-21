@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-import Pasta from "./images/pasta.jpg";
-import Burger from "./images/burger.jpg";
-import PotatoHam from "./images/potato-ham.jpg";
 
 const initialRecipes = [
   {
